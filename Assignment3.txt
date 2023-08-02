@@ -1,0 +1,81 @@
+1.Richest Customer Wealth
+
+class Solution {
+    public int maximumWealth(int[][] accounts) {
+        int largest = acounts[0][0];
+        for(int customer[]:accounts){
+            int currentSum=0;
+            for(int bank : customer)currentSum+=bank;
+            largest=Math.max(largest,currentSum);
+        }
+        return largest;
+    }
+}
+
+
+
+2.Toeplitz Matrix
+
+  public boolean isToeplitzMatrix(int[][] matrix) {
+        for(int i=1;i<matrix.length;i++)
+        {
+            for(int j=1;j<matrix[0].length;j++)
+            {
+                if(matrix[i][j]!=matrix[i-1][j-1])
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+3.Matrix Diagonal Sum
+
+class Solution {
+public:
+    int diagonalSum(vector<vector<int>>& mat) {
+        int n=mat.size(),ans=0;
+        for(int i=0;i<n;i++) ans+=(mat[i][i]+mat[i][n-i-1]);
+        return n%2==1?ans-mat[n/2][n/2]:ans;
+    }
+};
+ 
+
+
+4.Count negative numbers in a sorted matrix
+
+class Solution {
+public:
+    int countNegatives(vector<vector<int>>& grid) {
+        int c=0;
+        for(int i=0;i<grid.size();i++)
+        {
+            for(int j=0;j<grid[0].size();j++){
+                if(grid[i][j]<0)
+                c++;
+            }
+        }
+        return c;
+    }
+};
+
+
+
+5.Transpose Matrix
+
+class Solution {
+    public int[][] transpose(int[][] matrix) {
+        int [][] answer = new int[matrix[0].length][matrix.length];
+        for(int i=0;i<matrix.length;i++)
+        {
+            for(int j=0;j<matrix[0].length;j++)
+            {
+                answer[j][i]=matrix[i][j];
+            }
+        }
+        return answer;
+    }
+}
+
